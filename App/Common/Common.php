@@ -25,12 +25,20 @@ class Common extends Controller
 	{
 		# code...
 	}
-	public function return_ok($data='',$msg='',$code='')
+	public function return_ok($code='',$data='',$msg='')
 	{
 		$pool->getObj($pool_db);
 		$data = $data == ''?'true':$data;
 		$msg = $msg == ''?'成功！':$msg;
         $code = $code == ''?'200':$code;
+       return $this->writeJson($code,$data,$msg); 
+	}
+	public function return_err($code='',$data='',$msg='')
+	{
+		$pool->getObj($pool_db);
+		$data = $data == ''?'false':$data;
+		$msg = $msg == ''?'失败！':$msg;
+        $code = $code == ''?'1001':$code;
        return $this->writeJson($code,$data,$msg); 
 	}
 }

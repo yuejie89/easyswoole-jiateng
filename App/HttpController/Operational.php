@@ -93,6 +93,7 @@ class Operational extends Controller
         if( !empty($post['getpost']) ){//提交方式
             $data['getpost']=$post['getpost'];
         }
+        $user_info = Common::token_user_id($post['token']);
         
 
         Common::return_ok();
