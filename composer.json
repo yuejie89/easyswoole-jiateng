@@ -1,0 +1,38 @@
+{
+    "name": "easyswoole-yuejie89/jiateng",
+    "description": "easy swoole open source test script",
+    "type": "project",
+    "authors": [
+        {
+            "name": "刘家腾",
+            "email": "yuejie89@sina.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "easyswoole/easyswoole": "2.x-dev",
+        "easyswoole/swoole-ide-helper": "^1.0",
+        "joshcam/mysqli-database-class": "dev-master",
+	"php-amqplib/php-amqplib":"v2.7.2" 
+   },
+    "require-dev": {
+        "composer/composer": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+	        "MysqliDb\\":"App/Vendor/Db/MysqliDb.php"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "App\\Run::postCreateCmd"
+        ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
