@@ -34,5 +34,6 @@
             "type": "composer",
             "url": "https://packagist.phpcomposer.com"
         }
-    }
+    },
+    "license": "MIT"
 }
