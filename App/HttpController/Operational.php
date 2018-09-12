@@ -95,8 +95,7 @@ class Operational extends Controller
         }
         
 
-        $pool->getObj($pool_db);
-        return $this->writeJson('200',$data_list,$data);
+        Common::return_ok();
     }
     protected function onRequest($action): ?bool
     {
