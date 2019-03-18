@@ -25,6 +25,14 @@ class Index extends Controller
         $this->response()->write('<div style="text-align: center"><a href="https://www.easyswoole.com/Manual/2.x/Cn/_book/Base/http_controller.html">查看手册了解详细使用方法</a></div></br>');
     }
     /**
+    *capistrano  git自动拉取test
+    */
+    function index()
+    {
+        echo 'capistrano 自动拉取没';
+    }
+    
+    /**
      * front_test
      */
     function front_test()
