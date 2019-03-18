@@ -30,6 +30,7 @@ class Index extends Controller
     function index()
     {
         echo 'capistrano 自动拉取没';
+        echo '部署服务器 为啥没有自动发布最新版本啊？';
     }
     
     /**
